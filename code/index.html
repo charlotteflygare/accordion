@@ -1,46 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
   <head>
     <meta charset="utf-8" />
-    <title>Sprint 1: FAQ-Assignment</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900i" rel="stylesheet">
+    <title>FAQ-Assignment</title>
     <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900i" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
   </head>
   <body>
 
-    <section class="accordion">
-      <h1>VÅRA VANLIGASTE FRÅGOR OCH SVAR</h1>
+    <!-- Rubrik -->
+      <header>
+        <section class="accordion" tabindex="1">
+          <h1>VÅRA VANLIGASTE FRÅGOR OCH SVAR</h1>
+        </section>
+      </header>
 
-      <div class="title" id="section1">
-        <span class="plus"><i class="fa fa-plus"></i></span>
-        <span class="minus"><i class="fa fa-minus"></i></span>
-        Personlig inloggning
-      </div>
-      <div class="description">
-        <p>Inloggningen baseras på ditt medlemsnummer (står på baksidan av ditt medlemskort) eller din e-postadress samt ett lösenord. Kommer du inte ihåg ditt lösenord klicka på <span>’har du glömt ditt lösenord?’</span> så skickar vi ett nytt till dig. För att få ett nytt lösenord krävs det att du har din e-post adress registrerad hos oss. Du kan även logga in med ditt Facebook- eller Googlekonto. Du får som ny medlem automatiskt ett lösenord som är dag-månad-årtal (totalt 8 siffror).
-        <br><br>När du har loggat in kan du ändra dina inloggningsuppgifter under Min träning/Mina inställningar.</p>
-      </div>
-
-      <div class="title" id="section2">
-        <span class="plus"><i class="fa fa-plus"></i></span>
-        <span class="minus"><i class="fa fa-minus"></i></span>
-        Vad är mitt lösenord?</div>
-      <div class="description">
-        <p>Inloggningen baseras på ditt medlemsnummer (står på baksidan av ditt medlemskort) eller din e-postadress samt ett lösenord. Kommer du inte ihåg ditt lösenord klicka på <span>’har du glömt ditt lösenord?’</span> så skickar vi ett nytt till dig. För att få ett nytt lösenord krävs det att du har din e-post adress registrerad hos oss. Du kan även logga in med ditt Facebook- eller Googlekonto. Du får som ny medlem automatiskt ett lösenord som är dag-månad-årtal (totalt 8 siffror).
-        <br><br>När du har loggat in kan du ändra dina inloggningsuppgifter under Min träning/Mina inställningar.</p>
+      <!-- Varje section -->
+      <div class="wrapper" role="tablist">
+        <button class="title" id="headingOne" aria-controls="collapseOne" role="tab" aria-label="buttonname">
+          <span class="plus"><i class="fa fa-plus"></i></span>
+          <span class="minus"><i class="fa fa-minus"></i></span>
+            Personlig inloggning
+        </button>
+        <div class="description" id="collapseOne" aria-labelledby="headingOne" role="tabpanel">
+          <p>
+            Inloggningen baseras på ditt medlemsnummer (står på baksidan av ditt medlemskort)
+            eller din e-postadress samt ett lösenord. Kommer du inte ihåg ditt lösenord klicka
+            på <span>’har du glömt ditt lösenord?’</span> så skickar vi ett nytt till dig. För
+            att få ett nytt lösenord krävs det att du har din e-post adress registrerad hos oss.
+            Du kan även logga in med ditt Facebook- eller Googlekonto. Du får som ny medlem automatiskt
+            ett lösenord som är dag-månad-årtal (totalt 8 siffror).<span>När du har loggat in kan du ändra
+            dina inloggningsuppgifter under Min träning/Mina inställningar.</span>
+          </p>
         </div>
 
-      <div class="title" id="section3">
-        <span class="plus"><i class="fa fa-plus"></i></span>
-        <span class="minus"><i class="fa fa-minus"></i></span>
-        Bokningsregler
-      </div>
-      <div class="description">
-        <a href="https://www.sats.se/boka/bokningsregler/" target="_blank">Läs de aktuella bokningsreglerna</a>
-      </div>
-    </section>
+        <button class="title" id="headingTwo" aria-controls="collapseTwo" role="tab" aria-label="buttonname">
+          <span class="plus"><i class="fa fa-plus"></i></span>
+          <span class="minus"><i class="fa fa-minus"></i></span>
+            Vad är mitt lösenord?
+        </button>
+        <div class="description" id="collapseTwo" aria-labelledby="headingTwo" role="tabpanel" tabindex="5">
+          <p>
+            Inloggningen baseras på ditt medlemsnummer (står på baksidan av ditt medlemskort) eller din
+            e-postadress samt ett lösenord. Kommer du inte ihåg ditt lösenord klicka på <span>’har du glömt
+            ditt lösenord?’</span> så skickar vi ett nytt till dig. För att få ett nytt lösenord krävs det
+            att du har din e-post adress registrerad hos oss. Du kan även logga in med ditt Facebook- eller
+            Googlekonto. Du får som ny medlem automatiskt ett lösenord som är dag-månad-årtal (totalt 8 siffror).<br>
+            <br>När du har loggat in kan du ändra dina inloggningsuppgifter under Min träning/Mina inställningar.
+          </p>
+        </div>
+
+        <button class="title" id="headingThree" aria-controls="collapseThree" role="tab" aria-label="buttonname">
+          <span class="plus"><i class="fa fa-plus"></i></span>
+          <span class="minus"><i class="fa fa-minus"></i></span>
+            Bokningsregler
+        </button>
+        <div class="description" id="collapseThree" aria-labelledby="headingThree" role="tabpanel">
+          <a href="https://www.sats.se/boka/bokningsregler/" target="_blank">
+            <p>Läs de aktuella bokningsreglerna</p></a>
+        </div>
+    </div>
 
     <script src="./script.js"></script>
 
